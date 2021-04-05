@@ -8,7 +8,7 @@ const html = `
   <html>
     <head></head>
     <body>
-      <div id="root"></div>
+      <div id="root"><h1>Hello</h1></div>
       <script>
         window.addEventListener("message", (event) => {
           try {
