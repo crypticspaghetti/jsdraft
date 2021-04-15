@@ -21,6 +21,21 @@ const initialState: CellState = {
 
 const reducer = produce((state: CellState = initialState, action: Action) => {
   switch (action.type) {
+    case ActionType.FETCH_CELLS:
+      state.loading = true;
+      state.error = null;
+      break;
+    case ActionType.FETCH_CELLS_COMPLETE:
+      state.order = action.payload.map((cell) => cell.id);
+      state.data = action.payload.reduce((acc, cell) => {
+        acc[cell.id] = cell;
+        return acc;
+      }, {} as CellState["data"]);
+      break;
+    case ActionType.FETCH_CELLS_ERROR:
+      state.loading = false;
+      state.error = action.payload;
+      break;
     case ActionType.MOVE_CELL:
       const { direction } = action.payload;
       const index = state.order.findIndex((id) => id === action.payload.id);
