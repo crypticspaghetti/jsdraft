@@ -24,5 +24,6 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "http-proxy-middleware": "^1.1.2"
-  }
+  },
+  "gitHead": "1ceefb8e56f49d3b24001f788e7e3f2f6f2c5fa7"
 }
