@@ -14,7 +14,7 @@
     "prepublishOnly": "esbuild src/index.ts --platform=node --outfile=dist/index.js --bundle --minify --define:process.env.NODE_ENV=\\\"production\\\""
   },
   "dependencies": {
-    "@jsnote/local-client": "^1.0.0"
+    "@jsdraft/local-client": "^1.0.0"
   },
   "devDependencies": {
     "@jsdraft/local-api": "^1.0.0",
