@@ -1,0 +1,4 @@
+tasks:
+  - name: Setup
+    init: yarn install && yarn lerna bootstrap
+    command: yarn start
